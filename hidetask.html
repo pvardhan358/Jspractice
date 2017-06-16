@@ -4,10 +4,9 @@
 
 </head>
 <body>
-Name:<input type="text" id="txtval" /><span id="message" style="display:none;color:red">Required</span><br>
-
-
-<button type="submit" onclick="message();">submit</button>
+Name:<input type="text" id="txtval" /><span id="message" style="display:none;color:red">&nbsp;&nbsp;Required</span><br>
+<button type="submit" onclick="message();">submit</button><br>
+<div id="successmsg" style="display:none;color:green">Congratulations!!!! Form has successfully submitted</div>
 <script>
 function message() {
 
@@ -16,10 +15,17 @@ var x= $("#txtval").val();
 if(x==0){
 	$("#message").css("display","inline");
  }
+ else{
+		$("#successmsg").css("display","inline");
+		$('#message').hide();
+	}
 //alert(x);
  setTimeout(function() { 
- 
- $('#message').hide(); }, 2000);
+ $('#successmsg').hide();
+
+ }, 3000);
+
+
 }
 </script>
 </script>
