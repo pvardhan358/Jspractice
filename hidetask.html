@@ -1,0 +1,29 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</head>
+<body>
+Name:<input type="text" id="txtval" /><span id="message" style="display:none;color:red">Required</span><br>
+
+
+<button type="submit" onclick="message();">submit</button>
+<script>
+function message() {
+
+ //$('#message').show();
+var x= $("#txtval").val();
+if(x==0){
+	$("#message").css("display","inline");
+ }
+//alert(x);
+ setTimeout(function() { 
+ 
+ $('#message').hide(); }, 2000);
+
+
+}
+</script>
+</script>
+</body>
+</html>
