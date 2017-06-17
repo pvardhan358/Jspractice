@@ -1,3 +1,7 @@
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -8,7 +12,11 @@ Name:<input type="text" id="txtval" /><span id="message" style="display:none;col
 <button type="submit" onclick="message();">submit</button><br>
 <div id="successmsg" style="display:none;color:green">Congratulations!!!! Form has successfully submitted</div>
 <script>
-	$('#txtval').keypress(function(event){
+
+$("#txtval").keypress(function(event){
+
+	$("#txtval").keypress(function(event){
+
  if(event.keyCode == 13){
  message();
  }
@@ -22,7 +30,11 @@ if(x==0){
  }
  else{
 		$("#successmsg").css("display","inline");
+
+		$("#message").hide();
+
 		$('#message').hide();
+
 	 	$("#txtval").val('');
 	}
 //alert(x);
@@ -30,7 +42,6 @@ if(x==0){
  $('#successmsg').hide();
 
  }, 3000);
-
 
 }
 </script>
